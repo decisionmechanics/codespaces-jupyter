@@ -1,7 +1,12 @@
 # GitHub Codespaces ♥️ Jupyter Notebooks
 
-Welcome to your shiny new codespace! We've got everything fired up and running for you to explore Python and Jupyter notebooks.
+This is a fork of the original repo to fix bugs in the image classification notebook.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with what you're seeing right now - where you go from here is up to you!
+There is [documentation](https://docs.github.com/en/codespaces/developing-in-a-codespace/getting-started-with-github-codespaces-for-machine-learning) to accompany the repo.
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+When in the Codespace, select a Python 3.12 environment (which will install the requirements) and then run the following commands to fix some dependency issues.
+
+```bash
+pip uninstall torch torchvision
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+```
